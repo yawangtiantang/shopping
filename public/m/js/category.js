@@ -11,7 +11,7 @@ $(function(){
 		url: '/category/queryTopCategory',
 		type: 'get',
 		success: function(response){
-			
+
 			// 所谓模板引擎 作用就是用来帮我们将数据和html拼接好 将拼接好的结果 返回给我们
 
 			// 将数据和html做拼接

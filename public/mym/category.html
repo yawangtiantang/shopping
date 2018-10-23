@@ -10,6 +10,7 @@
     <script src="assets/mui/js/mui.min.js"></script>
     <script src="assets/zepto/zepto.min.js"></script>
     <script src="js/category.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
 </head>
 <body>
 <header class="mui-bar mui-bar-nav my-header">
@@ -38,23 +39,7 @@
     <div class="category-left">
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
-                <div class="links">
-                    <a href="javascript:;" class="active">运动馆</a>
-                    <a href="javascript:;">女士馆</a>
-                    <a href="javascript:;">男士馆</a>
-                    <a href="javascript:;">户外馆</a>
-                    <a href="javascript:;">运动馆</a>
-                    <a href="javascript:;">女士馆</a>
-                    <a href="javascript:;">男士馆</a>
-                    <a href="javascript:;">户外馆</a>
-                    <a href="javascript:;">运动馆</a>
-                    <a href="javascript:;">女士馆</a>
-                    <a href="javascript:;">男士馆</a>
-                    <a href="javascript:;">户外馆</a>
-                    <a href="javascript:;">运动馆</a>
-                    <a href="javascript:;">女士馆</a>
-                    <a href="javascript:;">男士馆</a>
-                    <a href="javascript:;">户外馆</a>
+                <div class="links" id="links">
 
                 </div>
 
@@ -65,36 +50,13 @@
         <div class="mui-scroll-wrapper">
             <div class="mui-scroll">
                 <ul class="brand-list mui-clearfix">
-                    <li>
-                        <a href="">
-                            <img src="images/brand1.png" alt=""/>
-                            <p>耐克</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/brand2.png" alt=""/>
-                            <p>耐克</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/brand3.png" alt=""/>
-                            <p>耐克</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/brand4.png" alt=""/>
-                            <p>耐克</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <img src="images/brand5.png" alt=""/>
-                            <p>耐克</p>
-                        </a>
-                    </li>
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--<img src="images/brand1.png" alt=""/>-->
+                            <!--<p>耐克</p>-->
+                        <!--</a>-->
+                    <!--</li>-->
+
                 </ul>
 
             </div>
@@ -103,6 +65,28 @@
 
 
 </div>
+<script id="category-first" type="text/template">
+    <% for(var i=0; i<result.length;i++){%>
+        <a href="javascript:;" data-id="<%=result[i].id%>"><%=result[i].categoryName%></a>
+    <%}%>
 
+</script>
+
+<!--二级模板-->
+<script id="category-second" type="text/template">
+    <% for(var i =0; i<rows.length;i++){%>
+        <li>
+            <a href="javascript:;">
+                <img src="<%=rows[i].brandLogo%>" alt=""/>
+                <p><%=rows[i].brandName%></p>
+            </a>
+        </li>
+   <% }%>
+    <%if(rows.length==0){%>
+        <div class="noresult">暂无数据</div>
+
+   <% }%>
+
+</script>
 </body>
 </html>
