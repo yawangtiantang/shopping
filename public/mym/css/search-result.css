@@ -1,0 +1,11 @@
+.filter {
+  padding: 10px 14px;
+}
+.filter .mui-col-xs-6 {
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+}
+.filter .mui-col-xs-6 .mui-icon {
+  font-size: 14px;
+}
