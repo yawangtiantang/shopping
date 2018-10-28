@@ -1,0 +1,31 @@
+#getCode {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: mediumpurple;
+  font-size: 14px;
+}
+.mui-button-row {
+  padding: 10px 10px;
+}
+.mui-button-row .mui-btn-primary {
+  background-color: mediumpurple;
+  border: 1px solid mediumpurple;
+}
+.mui-button-row #login,
+.mui-button-row #register {
+  width: 100%;
+}
+.loginNow {
+  position: relative;
+  margin-top: 10px;
+}
+.loginNow a {
+  display: block;
+  position: absolute;
+  right: 10px;
+  top: 0;
+  color: mediumpurple;
+  font-size: 18px;
+}
