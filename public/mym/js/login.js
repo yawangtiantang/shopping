@@ -22,6 +22,7 @@ $(function(){
                 $('#login').html('正在登录...');
             },
             success:function(res){
+                console.log(res);
                 mui.toast('登陆成功');
                 $('#login').html('登录');
                 setTimeout(function(){

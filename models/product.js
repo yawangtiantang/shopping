@@ -82,7 +82,6 @@ Product.queryProduct = function (product, page, callback) {
 	console.log(selectSql);
 	console.log(param);
 	db.query(selectSql, param, function (err, result) {
-          console.log(err);
 		if (err) {
 			return callback(err);
 		}

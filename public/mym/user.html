@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="assets/mui/css/mui.min.css">
     <link rel="stylesheet" href="css/base.css">
     <script src="assets/mui/js/mui.min.js"></script>
+    <script src="assets/zepto/zepto.min.js"></script>
+    <script src="assets/artTemplate/template-native.js"></script>
+    <script src="js/user.js"></script>
 </head>
 <style>
     .mui-content > .mui-table-view:first-of-type{
@@ -26,7 +29,7 @@
     <a class="mui-icon mui-icon-search mui-pull-right"></a>
 </header>
 <nav class="mui-bar mui-bar-tab my-footer">
-    <a class="mui-tab-item mui-active" href="index.html">
+    <a class="mui-tab-item " href="index.html">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
     </a>
@@ -40,7 +43,7 @@
     </a>
     <a class="mui-tab-item" href="user.html">
         <span class="mui-icon mui-icon-person"></span>
-        <span class="mui-tab-label">会员中心</span>
+        <span class="mui-tab-label mui-active">会员中心</span>
     </a>
 </nav>
 <div class="mui-content">
@@ -64,7 +67,7 @@
             <a class="mui-navigate-right">收货地址管理</a>
         </li>
         <li class="mui-table-view-cell">
-            <a href="#" class="loginout">退出登录</a>
+            <a href="#" class="loginout" id="logout">退出登录</a>
         </li>
     </ul>
 </div>
